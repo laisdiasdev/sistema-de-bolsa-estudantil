@@ -1,3 +1,9 @@
+#pedir a renda no início 
+#mostrar qual bolsa pode concorrer 
+#mostrar os cursos disponíveis
+#pedir pra escolher o curso
+#mostrar em qual faculdade tem e qual o polo da faculdade
+
 class cursos :
     def __init__(self):
         self.curso1 = 'Engenharia da Computação'
@@ -23,19 +29,28 @@ print(faculdade1.curso4,',',faculdade1.curso7,',',faculdade1.curso5,',',faculdad
 faculdade3 = cursos( )
 print(faculdade1.curso10,',',faculdade1.curso8,',',faculdade1.curso5,',',faculdade1.curso1)
 
-print("Nossos cursos disponíveis são: ")
-print('[1] Administração')
-print('[2] Design')
-print('[3] Enfermagem')
-print('[4] Engenharia da Computação')
-print('[5] Estética')
-print('[6] Física')
-print('[7] Matemática')
-print('[8] Medicina')
-print('[9] Nutrição')
-print('[10] Pedagogia')
-print('[11] Sistemas de Informação')
+class facul :
+    def __init__(self):
+        self.cursos = [
+         'Engenharia da Computação',
+         'Pedagogia',
+         'Estética',
+         'Sistemas de Informação',
+         'Medicina',
+         'Enfermagem',
+         'Nutrição',
+         'Matemática',
+         'Física',
+         'Administração',
+         'Design'
+         ]
+    pass
 
-opcao = int('Escolha um curso: ')
-if (opcao == 1):
-    print (faculdade1) #inacabado
+faculdade1 = facul()
+
+print("Nossos cursos disponíveis são: ")
+i = 1
+for nome in faculdade1.cursos:
+    print(f"[{i}] {nome}")
+    i = i+1
+#Problema: ao escolher o curso, tem que exibir a nota de corte, quantas vagas tem para as bolsas e qual é a faculdade e cidade.
