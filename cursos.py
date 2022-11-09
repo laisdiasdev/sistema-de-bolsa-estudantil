@@ -20,14 +20,14 @@ class cursos :
         
     pass
 
-faculdade1 = cursos( )
-print(faculdade1.curso1,',',faculdade1.curso2,',',faculdade1.curso3,',',faculdade1.curso4)
+faculNewton = cursos( )
+print(faculNewton.curso1,',',faculNewton.curso2,',',faculNewton.curso3,',',faculNewton.curso4)
 
-faculdade2 = cursos( )
-print(faculdade1.curso4,',',faculdade1.curso7,',',faculdade1.curso5,',',faculdade1.curso9)
+faculEnciclopedia = cursos( )
+print(faculEnciclopedia.curso4,',',faculEnciclopedia.curso7,',',faculEnciclopedia.curso5,',',faculEnciclopedia.curso9)
 
-faculdade3 = cursos( )
-print(faculdade1.curso10,',',faculdade1.curso8,',',faculdade1.curso5,',',faculdade1.curso1)
+faculAtenas = cursos( )
+print(faculAtenas.curso10,',',faculAtenas.curso8,',',faculAtenas.curso5,',',faculAtenas.curso1)
 
 class facul :
     def __init__(self):
