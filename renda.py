@@ -5,14 +5,14 @@ while i < quant_pessoas:
     i = i + 1 
     salario = float(input(f"Informe a renda da {i}º pessoa: "))
     soma = soma + salario
-    rendafamiliar = soma/quant_pessoas
-print("Sua renda per capta familiar é de R$","%.2f" %rendafamiliar)
+    renda_familiar = soma/quant_pessoas
+print("Sua renda per capta familiar é de R$","%.2f" %renda_familiar)
 
-if rendafamiliar <= 1212:
+if renda_familiar <= 1212:
     print("Você pode concorrer a bolsa de 100%")
-if (rendafamiliar > 1212) and (rendafamiliar <= 2424):
+if (renda_familiar > 1212) and (renda_familiar <= 2424):
     print("Você pode concorrer a bolsa de 75%")
-if (rendafamiliar > 2424) and (rendafamiliar <= 3636):
+if (renda_familiar > 2424) and (renda_familiar <= 3636):
         print("Você pode concorrer a bolsa de 50%")
-if (rendafamiliar > 3636) and (rendafamiliar <= 6060):
+if (renda_familiar > 3636) and (renda_familiar <= 6060):
         print("Você pode concorrer a bolsa de 25%")
