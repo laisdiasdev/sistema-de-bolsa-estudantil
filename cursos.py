@@ -4,7 +4,7 @@
 #pedir pra escolher o curso
 #mostrar em qual faculdade tem e qual o polo da faculdade
 
-class cursos :
+'''class cursos :
     def __init__(self):
         self.curso1 = 'Engenharia da Computação'
         self.curso2 = 'Pedagogia'
@@ -32,17 +32,17 @@ print(faculAtenas.curso10,',',faculAtenas.curso8,',',faculAtenas.curso5,',',facu
 class facul :
     def __init__(self):
         self.cursos = [
-         'Engenharia da Computação',
-         'Pedagogia',
-         'Estética',
-         'Sistemas de Informação',
-         'Medicina',
-         'Enfermagem',
-         'Nutrição',
-         'Matemática',
-         'Física',
          'Administração',
-         'Design'
+         'Design',
+         'Enfermagem',
+         'Engenharia da Computação',
+         'Estética',
+         'Física',
+         'Matemática',
+         'Medicina',
+         'Nutrição',
+         'Pedagogia',
+         'Sistemas de Informação',
          ]
     pass
 
@@ -54,3 +54,6 @@ for nome in faculdade1.cursos:
     print(f"[{i}] {nome}")
     i = i+1
 #Problema: ao escolher o curso, tem que exibir a nota de corte, quantas vagas tem para as bolsas e qual é a faculdade e cidade.
+opcao = int(input('Escolha um curso: '))
+if opcao == 1:
+    print('Administração')'''
