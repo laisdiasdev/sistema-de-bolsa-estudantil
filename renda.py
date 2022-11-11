@@ -201,7 +201,7 @@ if (renda_familiar > 3636) and (renda_familiar <= 6060):
     
 
 dados = Administracao()
-print (dados.cem, dados.corte1)
+print (dados.cem, dados.notaDeCorte1)
     #tentei imprimir aqui e não deu
     
 
