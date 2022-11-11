@@ -184,14 +184,12 @@ for nome in faculdade1.cursos:
 opcao = int(input('Escolha um curso: '))
 if opcao == 1:
     print('Administração')
-    if renda_familiar <= 1818:
-
-
-
-    #des100 = int(100)
+if renda_familiar <= 1818:
         print("De acordo com sua renda per capta familiar, você pode concorrer a bolsa de 100%")
+        dados = Administracao()
+        print (dados.cem, dados.notaDeCorte1)
+
 if (renda_familiar > 1818) and (renda_familiar <= 2424):
-    #des75 = int(75)
     print("De acordo com sua renda per capta familiar, você pode concorrer a bolsa de 75%")
 if (renda_familiar > 2424) and (renda_familiar <= 3636):
     #des50 = int(50)
@@ -200,18 +198,14 @@ if (renda_familiar > 3636) and (renda_familiar <= 6060):
     print("De acordo com sua renda per capta familiar, você pode concorrer a bolsa de 25%")
     
 
-dados = Administracao()
-print (dados.cem, dados.notaDeCorte1)
-    #tentei imprimir aqui e não deu
-    
+'''dados = Administracao()
+print (dados.cem, dados.notaDeCorte1)'''
 
 '''a intenção depois de saber qual a bolsa é:
 mostrar a quantidade de vagas;
 nota de corte;
 nota do enem do usuário.
 Isso pra cada curso ecolhido.'''
-
-
 
 '''if des100 == 100:
         print (f'Bolsa de {des100}%')
