@@ -4,7 +4,7 @@ from dados import cursos
 
 def main():
 	# cadastro do usuario
-	#usr = Usuario()
+	usr = Usuario()
 
 	# mostrar faculdades disponíveis
 	i = 1
