@@ -1,26 +1,38 @@
-from usuario import Usuario
-from faculdade import Facul
-from faculdade import faculdades
-
-def mostrarFaculdades():
-	i = 1
-	for facul in faculdades:
-		print(f"[{i}] Faculdade {facul.nome}")
-		i = i+1
+from classes import Usuario
+from dados import faculdades
+from dados import cursos
 
 def main():
 	# cadastro do usuario
 	#usr = Usuario()
 
 	# mostrar faculdades disponíveis
-	confirma = "n"
-	while confirma != "s":
-		mostrarFaculdades()
-		facul = faculdades[int(input("\nEm qual faculdade você deseja se matricular? "))-1]
-		facul.mostrarCursos()
-		confirma = input(f"\nDeseja se matricular na faculdade {facul.nome}? (s/N) ")
+	i = 1
+	for facul in faculdades:
+		print(f"[{i}] Faculdade {facul.nome}")
+		i = i+1
 
-	# escolher curso, instituicao e turno
+	# escolher uma faculdade
+	while True:
+		escolha = int(input("\nEm qual faculdade você deseja se matricular? "))
+		if (escolha > 0 and escolha <= len(faculdades)):
+			break
+		else:
+			print("\nEste não é um número válido.")
+	facul = faculdades[escolha-1]
+
+	# escolher um curso
+	facul.mostrarCursos()
+	while True:
+		escolha = int(input("\nEm qual curso você deseja se matricular? "))
+		if (escolha > 0 and escolha < len(facul.cursos)):
+			break
+		else:
+			print("\nEste não é um número válido.")
+	curso = cursos[escolha-1]
+
+	print(f"Você se matriculou no curso de {curso.nome} na faculdade {facul.nome}.")
+
 	# mostrar bolsas disponíveis
 	# informar usuario caso esteja concorrendo
 
