@@ -38,7 +38,7 @@ def main():
 	for bolsa in curso.bolsas:
 		if (bolsa.desconto <= usr.desconto) and (bolsa.n_corte < usr.enem):
 			print(f"[{i}] Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
-		i = i+1
+			i = i+1
 
 	# informar usuario caso esteja concorrendo
 
