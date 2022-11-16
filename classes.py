@@ -1,7 +1,19 @@
+import validate_cpf
+
 class Usuario:
 	def __init__(self):
-		# perguntar dados do usário
+		# obter dados do usário
+
 		self.nome = input("Nome do usuário: ")
+
+		# validar cpf
+		while True:
+			self.cpf = input("CPF do usuário: ")
+			if validate_cpf.is_valid(self.cpf) == True:
+				break
+			else:
+				print("Este não é um CPF válido.")
+
 		self.enem = int(input("Nota do ENEM: "))
 
 		# calcular renda

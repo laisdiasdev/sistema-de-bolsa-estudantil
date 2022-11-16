@@ -1,6 +1,5 @@
-from classes import Usuario
-from dados import faculdades
-from dados import cursos
+from classes import *
+from dados import *
 
 def main():
 	# cadastro do usuario
