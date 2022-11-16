@@ -1,6 +1,6 @@
-from classes import Bolsa
-from classes import Curso
-from classes import Facul
+from classes.curso import *
+from classes.bolsa import *
+from classes.facul import *
 
 cursos = [
 	Curso("Administração",

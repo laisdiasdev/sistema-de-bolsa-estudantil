@@ -2,11 +2,16 @@ import validate_cpf
 
 class Usuario:
 	def __init__(self):
-		# obter dados do usário
+		self.obterDados()
 
-		self.nome = input("Nome do usuário: ")
+	def obterDados(self):
+		self.nome = input("Nome completo do usuário: ")
+		self.validarCPF()
+		self.enem = int(input("Nota do ENEM: "))
+		self.obterRenda()
+		self.calcularDesconto()
 
-		# validar cpf
+	def validarCPF(self):
 		while True:
 			self.cpf = input("CPF do usuário: ")
 			if validate_cpf.is_valid(self.cpf) == True:
@@ -14,9 +19,8 @@ class Usuario:
 			else:
 				print("Este não é um CPF válido.")
 
-		self.enem = int(input("Nota do ENEM: "))
-
-		# calcular renda
+	def obterRenda(self):
+		## calcular renda
 		pessoas = int(input("Quantas pessoas moram com você? "))
 		salarios = []
 		for i in range(1, pessoas+1):
@@ -24,7 +28,7 @@ class Usuario:
 		self.renda = sum(salarios)/pessoas
 		print(f"A renda de sua família é de R${self.renda}.")
 
-		# calcular desconto
+	def calcularDesconto(self):
 		self.desconto = 0
 		if self.renda <= 1818:
 			self.desconto = 100
@@ -37,30 +41,3 @@ class Usuario:
 
 		if self.desconto > 0:
 			print(f"De acordo com sua renda familiar, você pode concorrer à bolsas de {self.desconto}% de desconto.\n")
-
-
-class Bolsa:
-	def __init__(self, desconto, vagas, n_corte):
-		self.desconto = desconto
-		self.vagas = vagas
-		self.n_corte = n_corte
-
-
-class Curso:
-	def __init__(self, nome, bolsas):
-		self.nome = nome
-		self.bolsas = bolsas
-
-
-class Facul:
-	def __init__(self, nome, cursos):
-		self.cursos = cursos
-		self.nome = nome
-	pass
-
-	def mostrarCursos(self):
-		print(f"\nCursos disponíveis na faculdade {self.nome}: ")
-		i = 1
-		for curso in self.cursos:
-			print(f"[{i}] {curso.nome}")
-			i = i+1
