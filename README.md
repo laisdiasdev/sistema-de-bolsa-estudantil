@@ -2,14 +2,14 @@
 
 ## Modo de uso
 
-'''bash
+```bash
 pip install -r requirements.txt
 ./run.sh
-'''
+```
 
 ou
 
-'''bash
+```bash
 pip install -r requirements.txt
 python main.py
-'''
+```
