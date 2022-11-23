@@ -45,7 +45,7 @@ cursos = [
 	),
 	Curso("Fisica",
 		[
-		Bolsa(100, 0, 0),
+		Bolsa(100, 4, 604),
 		Bolsa(75, 8, 593),
 		Bolsa(50, 0, 572),
 		Bolsa(25, 12, 547),
@@ -62,7 +62,7 @@ cursos = [
 	Curso("Medicina",
 		[
 		Bolsa(100, 7, 807),
-		Bolsa(75, 0, 0),
+		Bolsa(75, 6, 798),
 		Bolsa(50, 5, 787),
 		Bolsa(25, 0, 0),
 		]
@@ -102,7 +102,7 @@ faculdades = [
 		cursos[3],
 		]
 	),
-	Facul("Enciclopédia",
+	Facul("Jacques Rousseau",
 		[
 		cursos[3],
 		cursos[4],
@@ -110,7 +110,7 @@ faculdades = [
 		cursos[8],
 		]
 	),
-	Facul("Atenas",
+	Facul("Saint Louis",
 		[
 		cursos[0],
 		cursos[4],
