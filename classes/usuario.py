@@ -7,6 +7,7 @@ class Usuario:
 	def obterDados(self):
 		self.nome = input("Nome completo do usuário: ")
 		self.validarCPF()
+		self.validarEmail()
 		self.enem = int(input("Nota do ENEM: "))
 		self.obterRenda()
 		self.calcularDesconto()
@@ -18,6 +19,14 @@ class Usuario:
 				break
 			else:
 				print("Este não é um CPF válido.")
+				
+	def  validarEmail ( self , email ):
+		while True:
+			self.email = input("Informe seu e-mail: ")
+			if  ("@"  in  email)  and  (".com"  in email) == True :
+				break
+			else:
+				print("E-mail inválido")
 
 	def obterRenda(self):
 		## calcular renda
