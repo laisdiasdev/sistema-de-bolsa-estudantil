@@ -40,7 +40,7 @@ def main():
 	# mostrar bolsas disponiveis
 	if len(usr.bolsas) > 0:
 		i = 1
-		print("\nDe acordo com sua renda familiar e nota do ENEM, você pode concorrer às seguintes bolsas:")
+		print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer às seguintes bolsas:")
 		for bolsa in usr.curso.bolsas:
 			print(f"[{i}] Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
 			i = i+1
