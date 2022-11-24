@@ -21,13 +21,13 @@ def main():
 			print("\nDigite um número válido.")
 
 	# remover 1 pois listas começam no número 0
-	facul = faculdades[escolha-1]
+	usr.facul = faculdades[escolha-1]
 
 	# escolher um curso
-	facul.mostrarCursos()
+	usr.facul.mostrarCursos()
 	while True:
 		escolha = int(input("\nEm qual curso você deseja se matricular? "))
-		if (escolha > 0 and escolha <= len(facul.cursos)):
+		if (escolha > 0 and escolha <= len(usr.facul.cursos)):
 			break
 		else:
 			print("\nEste não é um número válido.")
@@ -39,15 +39,21 @@ def main():
 	i = 1
 	for bolsa in usr.curso.bolsas:
 		if (bolsa.desconto == usr.desconto):
-			usr.bolsa = bolsa
+			if (bolsa.n_corte <= usr.enem):
+				print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer à seguinte bolsa:")
+				print(f"Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
+				print("\nDeseja concorrer à bolsa? (s/n)")
+				while True
+					resposta = input()
+					if (resposta == "sim" or resposta == "s"):
+						usr.bolsa = bolsa
+						break
+					elif (resposta == "nao" or resposta == "n"):
+						break
+			else:
+				print("\nSua nota do ENEM é menor do que a nota de corte do curso. Você deseja paticipar da lista de espera?")
 			break
 		i = i+1
-	
-	if (usr.bolsa.n_corte <= usr.enem):
-		print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer à seguinte bolsa:")
-		print(f"Bolsa de {usr.bolsa.desconto}% de desconto, com nota de corte de {usr.bolsa.n_corte} e {usr.bolsa.vagas} vagas.")
-	else:
-		print("\nSua nota do ENEM é menor do que a nota de corte do curso. Você pode paticipar da lista de espera após o resultado.")
 
 if __name__ == "__main__":
 	main()
