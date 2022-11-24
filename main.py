@@ -31,23 +31,24 @@ def main():
 			print("\nEste não é um número válido.")
 	usr.curso = cursos[escolha-1]
 
-	# calcular a quais bolsas usuario pode concorrer
-	usr.bolsas = []
+	# calcular a qual bolsa o usuario pode concorrer
+	i = 1
 	for bolsa in usr.curso.bolsas:
-		if (bolsa.desconto <= usr.desconto) and (bolsa.n_corte < usr.enem):
-			usr.bolsas.append(bolsa)
-
-	# mostrar bolsas disponiveis
-	if len(usr.bolsas) > 0:
-		i = 1
-		print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer às seguintes bolsas:")
-		for bolsa in usr.curso.bolsas:
-			print(f"[{i}] Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
+			if (bolsa.desconto == usr.desconto):
+				print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer à seguinte bolsa:")
+				print(f"[{i}] Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
 			i = i+1
 	else:
-		print("\nDe acordo com sua renda familiar e nota do ENEM, você não pode concorrer à nenhuma bolsa.")
+		if (bolsa.n_corte > usr.enem):
+			print("\nPorém, sua nota do ENEM é menor do que a nota de corte do curso. Você pode paticipar da lista de espera após o resultado.")
 
 	# informar usuario caso esteja concorrendo
 
 if __name__ == "__main__":
 	main()
+	def opcoes(self):
+		self.opcao = input("Deseja concorrer à bolsa? (SIM/NAO)")
+		if self.opcao == "SIM":
+			print("Parabéns! Você está concorrendo à bolsa. Aguarde a convocação no edital que será lançado.")
+		else: 
+			print("ENCERRADO")
