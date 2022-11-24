@@ -1,5 +1,8 @@
 import validate_cpf
 
+print("Insira alguns dados para realizar o cadastro.")
+print()
+
 class Usuario:
 	def __init__(self):
 		self.obterDados()
@@ -7,7 +10,6 @@ class Usuario:
 	def obterDados(self):
 		self.nome = input("Nome completo do usuário: ")
 		self.validarCPF()
-		self.validarEmail()
 		self.enem = int(input("Nota do ENEM: "))
 		self.obterRenda()
 		self.calcularDesconto()
@@ -16,17 +18,11 @@ class Usuario:
 		while True:
 			self.cpf = input("CPF do usuário: ")
 			if validate_cpf.is_valid(self.cpf) == True:
+				print("\nCadastro realizado.")
+				print("")
 				break
 			else:
 				print("Este não é um CPF válido.")
-				
-	def  validarEmail ( self , email ):
-		while True:
-			self.email = input("Informe seu e-mail: ")
-			if  ("@"  in  email)  and  (".com"  in email) == True :
-				break
-			else:
-				print("E-mail inválido")
 
 	def obterRenda(self):
 		## calcular renda
@@ -49,4 +45,4 @@ class Usuario:
 			self.desconto = 25
 
 		if self.desconto > 0:
-			print(f"De acordo com sua renda familiar, você pode concorrer à bolsas de {self.desconto}% de desconto.\n")
+			print(f"De acordo com sua renda familiar, você pode concorrer à bolsa de {self.desconto}% de desconto.\n")
