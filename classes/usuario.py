@@ -11,9 +11,18 @@ class Usuario:
 		self.nome = input("Nome completo do usuário: ")
 		self.validarEmail()
 		self.validarCPF()
-		self.enem = int(input("Nota do ENEM: "))
+		self.validarENEM()
 		self.obterRenda()
 		self.calcularDesconto()
+		print("Cadastro concluído. ")
+
+	def validarENEM(self):
+		while True:
+			self.enem = int(input("Nota do ENEM do usuário: "))
+			if (self.enem >= 0 and self.enem <= 1000):
+				break
+			else:
+				print("Digite uma nota válida.")
 
 	def validarEmail(self):
 		while True:
@@ -29,12 +38,10 @@ class Usuario:
 	def validarCPF(self):
 		while True:
 			self.cpf = input("CPF do usuário: ")
-			if validate_cpf.is_valid(self.cpf) == True:
-				print("\nCadastro realizado.")
-				print("")
-				break
-			else:
+			if validate_cpf.is_valid(self.cpf) == False:
 				print("Este não é um CPF válido.")
+			else:
+				break
 
 	def obterRenda(self):
 		## calcular renda

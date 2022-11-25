@@ -51,8 +51,11 @@ def main():
 				escolha = input("\nSua nota do ENEM é menor do que a nota de corte do curso. Você deseja paticipar da lista de espera? (S/N) ")
 				if (escolha == "sim" or escolha == "s" or escolha == "S"):
 					print("Você está cadastrado na lista de espera, o contataremos após a saída dos resultados.")
+					return
 			break
 		i = i+1
+
+	print(f"Parabéns, você está matriculado no curso de {usr.curso.nome} na faculdade {usr.facul.nome}.")
 
 if __name__ == "__main__":
 	main()
