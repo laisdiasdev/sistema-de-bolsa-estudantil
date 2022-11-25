@@ -1,1 +1,2 @@
 validate-cpf==0.1.2
+email-validator==1.3
