@@ -1,4 +1,4 @@
-### Sistema de Bolsa Estudantil
+# Sistema de Bolsa Estudantil
 
 ## Modo de uso
 
