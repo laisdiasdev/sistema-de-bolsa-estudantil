@@ -1,7 +1,7 @@
 import validate_cpf
+from email_validator import validate_email, EmailNotValidError
 
-print("Insira alguns dados para realizar o cadastro.")
-print()
+print("Insira alguns dados para realizar o cadastro.\n")
 
 class Usuario:
 	def __init__(self):
@@ -9,11 +9,22 @@ class Usuario:
 
 	def obterDados(self):
 		self.nome = input("Nome completo do usuário: ")
-		self.email = input("Email do usuário: ")
+		self.validarEmail()
 		self.validarCPF()
 		self.enem = int(input("Nota do ENEM: "))
 		self.obterRenda()
 		self.calcularDesconto()
+
+	def validarEmail(self):
+		while True:
+			try:
+				email = input("Email do usuário: ")
+				validation = validate_email(email, check_deliverability=True)
+				self.email = validation.email
+				break
+			except EmailNotValidError as e:
+				# email não é válido
+				print("Digite um email válido.")
 
 	def validarCPF(self):
 		while True:
