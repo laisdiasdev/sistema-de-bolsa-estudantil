@@ -46,11 +46,17 @@ def main():
 				print(f"Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
 				escolha = input("\nDeseja concorrer à bolsa? (S/N) ")
 				if (escolha == "sim" or escolha == "s" or escolha == "S"):
+					print("Você está concorrendo à bolsa. Aguarde o resultado no próximo edital.")
 					usr.bolsa = bolsa
+				else:
+					print("ENCERRADO")
 			else:
 				escolha = input("\nSua nota do ENEM é menor do que a nota de corte do curso. Você deseja paticipar da lista de espera? (S/N) ")
 				if (escolha == "sim" or escolha == "s" or escolha == "S"):
 					print("Você está cadastrado na lista de espera, o contataremos após a saída dos resultados.")
+					return
+				else:
+					print("ENCERRADO")
 					return
 			break
 		i = i+1
