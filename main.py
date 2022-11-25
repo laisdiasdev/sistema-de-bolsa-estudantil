@@ -33,7 +33,7 @@ def main():
 			print("\nEste não é um número válido.")
 
 	# remover 1 pois listas começam no número 0
-	usr.curso = cursos[escolha-1]
+	usr.curso = usr.facul.cursos[escolha-1]
 
 	print(f"\nVocê se cadastrou no curso de {usr.curso.nome} na faculdade {usr.facul.nome}.")
 
