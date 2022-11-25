@@ -1,5 +1,9 @@
 # Sistema de Bolsa Estudantil
 
+Faculdade Santa Terezinha
+
+Trabalho apresentado para obtenção da nota parcial da disciplinas de Algoritmos e Linguagens de Programação
+
 ## Modo de uso
 
 ```bash
