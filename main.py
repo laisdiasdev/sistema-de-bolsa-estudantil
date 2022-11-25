@@ -35,6 +35,8 @@ def main():
 	# remover 1 pois listas começam no número 0
 	usr.curso = cursos[escolha-1]
 
+	print(f"\nVocê se cadastrou no curso de {usr.curso.nome} na faculdade {usr.facul.nome}.")
+
 	# calcular a qual bolsa o usuario pode concorrer
 	i = 1
 	for bolsa in usr.curso.bolsas:
@@ -42,16 +44,13 @@ def main():
 			if (bolsa.n_corte <= usr.enem):
 				print("\nDe acordo com sua renda per capta familiar e nota do ENEM, você pode concorrer à seguinte bolsa:")
 				print(f"Bolsa de {bolsa.desconto}% de desconto, com nota de corte de {bolsa.n_corte} e {bolsa.vagas} vagas.")
-				print("\nDeseja concorrer à bolsa? (s/n)")
-				while True
-					resposta = input()
-					if (resposta == "sim" or resposta == "s"):
-						usr.bolsa = bolsa
-						break
-					elif (resposta == "nao" or resposta == "n"):
-						break
+				escolha = input("\nDeseja concorrer à bolsa? (S/N) ")
+				if (escolha == "sim" or escolha == "s" or escolha == "S"):
+					usr.bolsa = bolsa
 			else:
-				print("\nSua nota do ENEM é menor do que a nota de corte do curso. Você deseja paticipar da lista de espera?")
+				escolha = input("\nSua nota do ENEM é menor do que a nota de corte do curso. Você deseja paticipar da lista de espera? (S/N) ")
+				if (escolha == "sim" or escolha == "s" or escolha == "S"):
+					print("Você está cadastrado na lista de espera, o contataremos após a saída dos resultados.")
 			break
 		i = i+1
 

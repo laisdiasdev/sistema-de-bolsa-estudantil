@@ -9,6 +9,7 @@ class Usuario:
 
 	def obterDados(self):
 		self.nome = input("Nome completo do usuário: ")
+		self.email = input("Email do usuário: ")
 		self.validarCPF()
 		self.enem = int(input("Nota do ENEM: "))
 		self.obterRenda()
@@ -31,7 +32,7 @@ class Usuario:
 		for i in range(1, pessoas+1):
 			salarios.append(float(input(f"Qual o salário da {i}º pessoa? ")))
 		self.renda = sum(salarios)/pessoas
-		print(f"A renda de sua família é de R${self.renda}.")
+		print(f"A renda de sua família é de R${self.renda}.\n")
 
 	def calcularDesconto(self):
 		self.desconto = 0
